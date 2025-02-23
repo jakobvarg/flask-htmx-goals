@@ -1,0 +1,5 @@
+<ul id="goals" hx-swap="outerHTML">
+  {% for goal in course_curr %}
+    {% include '_partials/show_goals.html' %}
+  {% endfor %}
+</ul>

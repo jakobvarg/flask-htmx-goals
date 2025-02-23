@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}HTMX COURSE PROJECT{% endblock  %}
+
+{% block content %}
+  <p>HTMX is a JavaScript library that you use without writing JavaScript code.</p>
+  <form hx-post="/add_note" hx-target="#vals" hx-swap="innerHTML">
+    <p>
+      <label for="note">Your Note</label>
+      <input type="text" name="note" id="note">
+    </p>
+    <p>
+      <button type="submit">Save Note</button>
+    </p>
+  </form>
+  <div id="vals">
+    {% include '_partials/show-notes.html' %}
+  </div>
+  <!-- <button hx-get="/info" hx-target="main" hx-trigger="mouseenter[ctrlKey],click" hx-swap="beforeend">Learn More</button> -->
+{% endblock  %}

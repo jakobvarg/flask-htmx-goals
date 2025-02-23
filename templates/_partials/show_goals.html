@@ -1,0 +1,9 @@
+<li id="item-{{ goal.id }}">
+  <span>{{ goal.goal }}</span>
+  <button type="button" 
+      hx-delete="{{ url_for('delete_goal', id=goal.id) }}" 
+      hx-target="#item-{{ goal.id }}" 
+      hx-confirm="Are you sure?">
+      Remove
+  </button>
+</li>
