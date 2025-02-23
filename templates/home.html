@@ -19,6 +19,7 @@
           hx-target="#goals"
           hx-swap="beforeend" 
           hx-on::after-request="this.reset()"
+          hx-disabled-elt="form button"
           method="POST" >
           <div>
             <label htmlFor="goal">Goal</label>
